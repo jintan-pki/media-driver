@@ -86,7 +86,10 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: media-driver-clang
-        path: /usr/lib/x86_64-linux-gnu/*
+        path: |
+            /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+            /etc/profile.d/intel-media.sh
+            /usr/lib/x86_64-linux-gnu/igfxcmrt64.so
         if-no-files-found: error      
 
 
@@ -161,7 +164,10 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: media-driver-gcc-pro
-        path: /usr/lib/x86_64-linux-gnu/*
+        path: |
+            /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+            /etc/profile.d/intel-media.sh
+            /usr/lib/x86_64-linux-gnu/igfxcmrt64.so
         if-no-files-found: error 
 
 
@@ -236,5 +242,8 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: media-driver-gcc-nonfree
-        path: /usr/lib/x86_64-linux-gnu/*
+        path: |
+            /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+            /etc/profile.d/intel-media.sh
+            /usr/lib/x86_64-linux-gnu/igfxcmrt64.so
         if-no-files-found: error 
