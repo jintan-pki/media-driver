@@ -88,7 +88,8 @@ jobs:
         name: media-driver-clang
         path: /usr/lib/x86_64-linux-gnu/*
         if-no-files-found: error      
-        
+
+
   gcc-10-production-kmd:
     runs-on: ubuntu-18.04
     env:
@@ -156,6 +157,14 @@ jobs:
         make VERBOSE=1 -j$(nproc)
         sudo make install
 
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: media-driver-gcc-pro
+        path: /usr/lib/x86_64-linux-gnu/*
+        if-no-files-found: error 
+
+
   gcc-10-nonfree-kernels-off:
     runs-on: ubuntu-18.04
     env:
@@ -222,3 +231,10 @@ jobs:
           ..
         make VERBOSE=1 -j$(nproc)
         sudo make install
+        
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: media-driver-gcc-nonfree
+        path: /usr/lib/x86_64-linux-gnu/*
+        if-no-files-found: error 
