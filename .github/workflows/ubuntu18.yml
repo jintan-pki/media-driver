@@ -81,6 +81,7 @@ jobs:
           ..
         make VERBOSE=1 -j$(nproc)
         sudo make install
+        sudo strip -s /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
@@ -159,6 +160,7 @@ jobs:
           ..
         make VERBOSE=1 -j$(nproc)
         sudo make install
+        sudo strip -s /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
         
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
