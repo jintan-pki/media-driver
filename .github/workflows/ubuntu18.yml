@@ -89,8 +89,9 @@ jobs:
         name: media-driver-clang
         path: |
             /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
-            /etc/profile.d/intel-media.sh
-            /usr/lib/x86_64-linux-gnu/igfxcmrt64.so
+            /usr/lib/x86_64-linux-gnu/libigfxcmrt.so.7.2.0
+            /usr/lib/x86_64-linux-gnu/libigfxcmrt.so.7
+            /usr/lib/x86_64-linux-gnu/libigfxcmrt.so
         if-no-files-found: error      
 
 
@@ -168,6 +169,7 @@ jobs:
         name: media-driver-gcc-nonfree
         path: |
             /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
-            /etc/profile.d/intel-media.sh
-            /usr/lib/x86_64-linux-gnu/igfxcmrt64.so
+            /usr/lib/x86_64-linux-gnu/libigfxcmrt.so.7.2.0
+            /usr/lib/x86_64-linux-gnu/libigfxcmrt.so.7
+            /usr/lib/x86_64-linux-gnu/libigfxcmrt.so
         if-no-files-found: error 
