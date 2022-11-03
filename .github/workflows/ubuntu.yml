@@ -1,6 +1,8 @@
 name: ci
 
-on: [ push, pull_request ]
+on:
+  workflow_dispatch:
+
 
 env:
   _CFLAGS: -O2 -Wformat -Wformat-security -Wall -Werror -D_FORTIFY_SOURCE=2 -fstack-protector-strong
